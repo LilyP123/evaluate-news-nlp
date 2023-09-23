@@ -1,1 +1,7 @@
-
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><title>Test</title><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"></head><body><header><div class="">Logo</div><div class="">navigation</div></header><main><section><form id="myForm" class="" onsubmit="return Client.handleSubmit(event)"><input id="name" name="input" value="" placeholder="Enter URL" autocomplete="off"> <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"></form></section><section><strong>Form Results:</strong><h1 id="title"></h1><p id="description"></p><div id="results"><h2>Results</h2><p>Polarity: <span id="polarity"></span></p><p>Agreement: <span id="agreement"></span></p><p>Subjectivity: <span id="subjectivity"></span></p><p>Confidence: <span id="confidence"></span></p><p>Irony: <span id="irony"></span></p></div></section></main><footer><p>This is a footer</p></footer><script>// Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }</script><script type="module" src="../index.js"></script></body></html>
